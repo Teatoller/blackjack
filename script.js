@@ -26,6 +26,11 @@ function createDeck() {
   return deck;
 }
 
+// Function to take next card off the Deck.
+function getNextCard() {
+    return deck.shift();
+};
+
 let deck = createDeck();
 
 // To make sure the deck is created
@@ -33,7 +38,7 @@ for (let i = 0; i < deck.length; i++) {
   console.log(deck[i]);
 }
 
-let playerCards = [deck[0], deck[2]];
+let playerCards = [getNextCard(), getNextCard()];
 
 console.log("Welcome to Blackjack!");
 
