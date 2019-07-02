@@ -15,14 +15,18 @@ let values = [
   "Two"
 ];
 
-let deck = [];
-
-// Loop through suit of cards for all card values and move to the deck
-for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
-  for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-    deck.push(values[valueIdx] + " of " + suits[suitIdx]);
+function createDeck() {
+  // Loop through suit of cards for all card values and move to the deck
+  let deck = [];
+  for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
+    for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
+      deck.push(values[valueIdx] + " of " + suits[suitIdx]);
+    }
   }
+  return deck;
 }
+
+let deck = createDeck();
 
 // To make sure the deck is created
 for (let i = 0; i < deck.length; i++) {
